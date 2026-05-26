@@ -1,7 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import luana from "@/assets/luana-retrato.png";
-import { getPost, formatDatePt } from "@/lib/blog";
+import { getPost, formatDatePt, type BlogFAQ } from "@/lib/blog";
 import { WHATSAPP_URL, SITE } from "@/lib/site";
 
 export const Route = createFileRoute("/blog/$slug")({
@@ -114,7 +114,7 @@ function PostPage() {
       <section className="mt-16">
         <h2 className="font-display text-3xl text-primary">Perguntas frequentes</h2>
         <dl className="mt-6 divide-y divide-primary/15 border-y border-primary/15">
-          {post.faq.map((f) => (
+          {post.faq.map((f: BlogFAQ) => (
             <div key={f.q} className="py-5">
               <dt className="font-display text-xl text-primary">{f.q}</dt>
               <dd className="mt-2 text-[15px] leading-relaxed text-foreground/80">{f.a}</dd>
