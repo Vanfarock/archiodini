@@ -191,18 +191,21 @@ function Sobre() {
           </h2>
           <div className="mt-7 space-y-5 text-base leading-relaxed text-foreground/80">
             <p>
-              Sou <strong className="text-primary">Luana Chiodini</strong>, arquiteta apaixonada por
-              criar ambientes que traduzem quem mora neles. Atendo de forma{" "}
-              <strong className="text-primary">remota para todo o mundo.</strong>
+              Nossa missão é criar lares com a personalidade dos nossos clientes e por meio de
+              detalhes, contar sua história dentro do projeto. Nosso objetivo é criar ambientes
+              atemporais e com significado.
             </p>
             <p>
-              Cada projeto de design de interiores é desenvolvido com atenção aos seus gostos, à sua
-              rotina e ao seu orçamento. A entrega é digital, completa e pensada para que qualquer
-              equipe de obra na sua cidade execute com clareza.
+              Para nós cada espaço influencia diretamente na qualidade de vida, por isso nossos
+              projetos respeitam o seu estilo e necessidades. Mais do que estética, buscamos o
+              bem-estar e a praticidade para seu dia a dia.
             </p>
-            <p>
-              Cada ambiente é pensado para refletir sua essência e tornar sua rotina mais leve e
-              prática.
+            <p className="pt-2">
+              Atenciosamente,
+              <br />
+              <span className="mt-2 block font-display text-sm uppercase tracking-luxe text-primary">
+                Luana Chiodini
+              </span>
             </p>
           </div>
 
