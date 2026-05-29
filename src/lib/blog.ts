@@ -1,8 +1,4 @@
-import sala from "@/assets/portfolio-sala.jpg";
-import homeoffice from "@/assets/portfolio-homeoffice.jpg";
 import cozinha from "@/assets/projeto-cozinha.png";
-import closet from "@/assets/portfolio-closet.jpg";
-import quarto from "@/assets/portfolio-quarto.jpg";
 
 export interface BlogFAQ {
   q: string;
@@ -31,7 +27,7 @@ const posts: BlogPost[] = [
     category: "Processo",
     date: "2025-09-12",
     readingMinutes: 6,
-    cover: sala,
+    cover: cozinha,
     body: `
 <p>Um projeto de interiores online segue exatamente as mesmas etapas de um projeto presencial — briefing, levantamento, estudo preliminar, anteprojeto e projeto executivo. O que muda é o meio: tudo acontece por videochamada, troca de fotos, vídeos e plantas digitais. Para quem mora longe de grandes centros ou simplesmente prefere a comodidade do home office, o modelo remoto entrega o mesmo nível técnico com mais flexibilidade.</p>
 
@@ -119,7 +115,7 @@ const posts: BlogPost[] = [
     category: "Reforma",
     date: "2025-10-10",
     readingMinutes: 7,
-    cover: closet,
+    cover: cozinha,
     body: `
 <p>Reformar um apartamento parece simples — até o orçamento dobrar, a marcenaria não encaixar e a tomada ficar atrás do sofá. A maior parte desses problemas vem de uma única causa: começar a obra sem projeto. Veja os cinco erros mais comuns e como evitá-los.</p>
 
@@ -161,7 +157,7 @@ const posts: BlogPost[] = [
     category: "Home Office",
     date: "2025-10-22",
     readingMinutes: 6,
-    cover: homeoffice,
+    cover: cozinha,
     body: `
 <p>O home office deixou de ser um canto improvisado. Ele virou parte central da casa — e merece a mesma atenção que damos à sala ou à cozinha. Um bom projeto equilibra ergonomia, iluminação, acústica e estética.</p>
 
@@ -203,7 +199,7 @@ const posts: BlogPost[] = [
     category: "Guia",
     date: "2025-11-04",
     readingMinutes: 5,
-    cover: quarto,
+    cover: cozinha,
     body: `
 <p>Contratar uma profissional remota exige os mesmos cuidados de uma contratação presencial — talvez ainda mais atenção à comunicação, já que tudo acontece à distância. Aqui vai um passo a passo simples para escolher bem.</p>
 

@@ -3,9 +3,9 @@ import { useMemo, useState } from "react";
 import {
   ArrowRight,
   ArrowUpRight,
-  Pencil,
-  Video,
-  Hammer,
+  Home,
+  Flower,
+  Store,
   ClipboardList,
   Quote,
   Plus,
@@ -18,7 +18,7 @@ import { Arch } from "@/components/Arch";
 import { PROJECTS, PORTFOLIO_FILTERS } from "@/lib/portfolio";
 import { TESTIMONIALS } from "@/lib/testimonials";
 import { getAllPosts, formatDatePt } from "@/lib/blog";
-import { SITE, WHATSAPP_URL } from "@/lib/site";
+import { WHATSAPP_URL } from "@/lib/site";
 
 const FAQ_ITEMS = [
   {
@@ -26,20 +26,12 @@ const FAQ_ITEMS = [
     a: "Todo o processo acontece de forma remota: reunião inicial por vídeo, envio de plantas e fotos, desenvolvimento do projeto e entrega digital completa, com plantas técnicas, render 3D e lista de compras.",
   },
   {
-    q: "A Archiodini atende fora de Blumenau?",
-    a: "Sim! Atendemos 100% de forma remota para todo o Brasil — de São Paulo a Manaus, de Brasília ao interior do país.",
+    q: "Vocês atendem na minha cidade?",
+    a: "Sim! Atendemos 100% de forma remota para todo o mundo.",
   },
   {
-    q: "Quanto custa um projeto de interiores?",
-    a: "O investimento varia conforme o escopo, número de ambientes e nível de detalhamento. Entre em contato pelo WhatsApp para receber um orçamento personalizado, sem compromisso.",
-  },
-  {
-    q: "Vocês acompanham a execução da obra?",
-    a: "O acompanhamento é remoto, por videochamadas e mensagens com a equipe que executa o projeto na sua cidade. Não fazemos supervisão presencial de obra.",
-  },
-  {
-    q: "Em quanto tempo o projeto fica pronto?",
-    a: "Em média, projetos completos ficam prontos em 30 a 60 dias, dependendo do tamanho e do número de ambientes.",
+    q: "Quanto tempo antes devo contratar um projeto de interiores?",
+    a: "O ideal é contratar o projeto no mínimo 4 meses antes da obra começar. Isso permite que você aproveite o projeto para fazer melhores escolhas de materiais e móveis, além de ter mais tempo para pensar em detalhes que podem impactar a execução da obra.",
   },
 ];
 
@@ -48,8 +40,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       {
-        title:
-          "Arquiteta de Interiores Online para Todo o Brasil | Archiodini Projetos",
+        title: "Arquitetura de Interiores | Luana Chiodini",
       },
       {
         name: "description",
@@ -58,8 +49,7 @@ export const Route = createFileRoute("/")({
       },
       {
         property: "og:title",
-        content:
-          "Arquiteta de Interiores Online para Todo o Brasil | Archiodini Projetos",
+        content: "Arquitetura de Interiores | Luana Chiodini",
       },
       {
         property: "og:description",
@@ -120,28 +110,28 @@ function Hero() {
           </p>
           <h1 className="mt-5 font-display text-[42px] leading-[1.05] text-primary sm:text-[56px] lg:text-[68px]">
             Arquitetura de Interiores
-            <br />
-            para Todo o Brasil
-            <span className="block italic text-primary/70">— 100% remoto.</span>
           </h1>
           <p className="mt-7 max-w-xl text-base leading-relaxed text-foreground/75 sm:text-lg">
-            Transformamos seu espaço em uma extensão da sua identidade. Projetos
-            residenciais completos, feitos com cuidado e entregues onde você estiver.
+            Projetos funcionais que traduzem a sua personalidade.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-5">
+          <div className="relative mt-10 flex flex-wrap items-center gap-5">
+            <div
+              className="pointer-events-none absolute top-1/2 left-0 z-0 size-[7.5rem] -translate-x-1/2 -translate-y-1/4 rounded-full bg-primary/10 sm:size-32 md:size-36"
+              aria-hidden
+            />
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-3 rounded-full bg-primary px-7 py-4 text-[12px] uppercase tracking-luxe text-primary-foreground transition-opacity hover:opacity-90"
+              className="group relative z-10 inline-flex items-center gap-3 rounded-full bg-primary px-7 py-4 text-[12px] uppercase tracking-luxe text-primary-foreground transition-opacity hover:opacity-90"
             >
               Quero meu projeto
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <a
               href="#portfolio"
-              className="text-[12px] uppercase tracking-luxe text-primary/80 underline-offset-8 hover:underline"
+              className="relative z-10 text-[12px] uppercase tracking-luxe text-primary/80 underline-offset-8 hover:underline"
             >
               Ver portfólio ↓
             </a>
@@ -163,7 +153,7 @@ function Hero() {
             />
           </div>
           <div className="absolute -bottom-6 left-6 hidden rounded-full bg-background px-5 py-3 text-[11px] uppercase tracking-luxe text-primary shadow-md ring-1 ring-primary/10 sm:block">
-            Projeto residencial · Blumenau, SC
+            Projeto residencial
           </div>
         </div>
       </div>
@@ -178,51 +168,48 @@ function Sobre() {
     <section id="sobre" className="border-t border-border/60 bg-card/40">
       <div className="mx-auto grid max-w-7xl gap-14 px-5 py-20 sm:px-8 md:grid-cols-12 md:gap-16 md:py-28">
         <div className="relative md:col-span-5">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden bg-primary/10">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-md">
             <div className="clip-arch h-full w-full">
               <img
                 src={luana}
                 alt="Retrato de Luana Chiodini, arquiteta e designer de interiores"
-                className="h-full w-full object-cover"
+                className="h-full w-full object-cover object-[center_10%]"
                 loading="lazy"
               />
             </div>
           </div>
-          <Arch
-            className="absolute -bottom-8 -right-4 h-32 w-24 text-primary/15"
-            fill="currentColor"
+          <div
+            aria-hidden="true"
+            className="absolute -bottom-8 -right-4 size-28 rounded-full bg-primary/15 -z-index-1"
           />
         </div>
 
         <div className="md:col-span-7">
-          <p className="text-[11px] uppercase tracking-luxe text-primary/70">
-            Sobre a Luana
-          </p>
+          <p className="text-[11px] uppercase tracking-luxe text-primary/70">Sobre a Luana</p>
           <h2 className="mt-4 font-display text-4xl leading-tight text-primary sm:text-5xl">
             Ambientes que contam a sua história.
           </h2>
           <div className="mt-7 space-y-5 text-base leading-relaxed text-foreground/80">
             <p>
-              Sou <strong className="text-primary">Luana Chiodini</strong>, arquiteta apaixonada
-              por criar ambientes que traduzem quem mora neles. Atendo{" "}
-              <strong className="text-primary">100% de forma remota</strong> para todo o Brasil
-              — de São Paulo a Florianópolis, de Brasília ao interior do país.
+              Sou <strong className="text-primary">Luana Chiodini</strong>, arquiteta apaixonada por
+              criar ambientes que traduzem quem mora neles. Atendo de forma{" "}
+              <strong className="text-primary">remota para todo o mundo.</strong>
             </p>
             <p>
-              Cada projeto de design de interiores é desenvolvido com atenção aos seus gostos,
-              à sua rotina e ao seu orçamento. A entrega é digital, completa e pensada para que
-              qualquer equipe de obra na sua cidade execute com clareza.
+              Cada projeto de design de interiores é desenvolvido com atenção aos seus gostos, à sua
+              rotina e ao seu orçamento. A entrega é digital, completa e pensada para que qualquer
+              equipe de obra na sua cidade execute com clareza.
             </p>
             <p>
-              Mais que decorar, meu trabalho é desenhar a calma do seu dia a dia.
+              Cada ambiente é pensado para refletir sua essência e tornar sua rotina mais leve e
+              prática.
             </p>
           </div>
 
           <dl className="mt-10 grid max-w-lg grid-cols-3 gap-4">
             {[
-              { n: "50+", l: "Projetos entregues" },
+              { n: "150+", l: "Projetos entregues" },
               { n: "100%", l: "Atendimento remoto" },
-              { n: "BR", l: "Brasil inteiro" },
             ].map((s) => (
               <div
                 key={s.l}
@@ -234,6 +221,11 @@ function Sobre() {
                 </dd>
               </div>
             ))}
+            <div className="flex items-center justify-center rounded-2xl border border-primary/15 bg-background p-5 text-center">
+              <dd className="mt-1 text-[11px] uppercase tracking-luxe text-muted-foreground">
+                De Blumenau para o mundo
+              </dd>
+            </div>
           </dl>
 
           <div className="mt-10">
@@ -241,7 +233,7 @@ function Sobre() {
               to="/sobre"
               className="inline-flex items-center gap-2 text-[12px] uppercase tracking-luxe text-primary hover:opacity-80"
             >
-              Conheça a trajetória completa <ArrowUpRight className="h-4 w-4" />
+              Nosso propósito <ArrowUpRight className="h-4 w-4" />
             </Link>
           </div>
         </div>
@@ -254,24 +246,24 @@ function Sobre() {
 
 const SERVICES = [
   {
-    icon: Pencil,
-    title: "Projeto Completo de Interiores",
-    desc: "Do conceito à prancha executiva — moodboard, layout, especificação de materiais e mobiliário.",
+    icon: Home,
+    title: "Projeto de Interiores Residencial",
+    desc: "Ambientes pensados para refletir seu estilo e tornar sua rotina mais leve.",
   },
   {
-    icon: Video,
-    title: "Consultoria Online de Decoração",
-    desc: "Sessão de consultoria por vídeo para orientar você nas melhores escolhas para o seu espaço.",
+    icon: Flower,
+    title: "Assessoria de Decoração",
+    desc: "Ajuda personalizada para escolher móveis, cores e detalhes que combinam com você.",
   },
   {
-    icon: Hammer,
-    title: "Projeto de Reforma",
-    desc: "Planejamento completo de reformas residenciais com foco em funcionalidade e estética, entregue remotamente.",
+    icon: Store,
+    title: "Projeto de Interiores Comercial",
+    desc: "Espaços funcionais e acolhedores que fortalecem a identidade do seu negócio.",
   },
   {
     icon: ClipboardList,
     title: "Assessoria em Orçamentos",
-    desc: "Auxílio na comparação e negociação de orçamentos com fornecedores e lojas, sem você sair de casa.",
+    desc: "Menos dúvidas na hora de comprar, mais tranquilidade para investir no seu espaço.",
   },
 ];
 
@@ -279,20 +271,18 @@ function Servicos() {
   return (
     <section id="servicos" className="border-t border-border/60">
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-28">
-        <div className="flex flex-col items-start justify-between gap-6 md:flex-row md:items-end">
-          <div>
-            <p className="text-[11px] uppercase tracking-luxe text-primary/70">Serviços</p>
-            <h2 className="mt-4 max-w-2xl font-display text-4xl leading-tight text-primary sm:text-5xl">
-              Quatro formas de cuidar do seu espaço.
-            </h2>
-          </div>
-          <p className="max-w-sm text-sm text-muted-foreground">
-            Cada serviço é entregue digitalmente, com cronograma e contrato. Você escolhe o
-            escopo que faz sentido para o seu momento.
+        <header className="max-w-3xl">
+          <p className="text-[11px] uppercase tracking-luxe text-primary/70">Serviços</p>
+          <h2 className="mt-4 font-display text-4xl leading-tight text-primary sm:text-5xl">
+            Como podemos ajudar você?
+          </h2>
+          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+            Cada serviço é entregue digitalmente, com cronograma e contrato. Você escolhe o escopo
+            que faz sentido para o seu momento.
           </p>
-        </div>
+        </header>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
           {SERVICES.map((s) => {
             const Icon = s.icon;
             return (
@@ -365,11 +355,7 @@ function Portfolio() {
               target="_blank"
               rel="noopener noreferrer"
               className={`group relative overflow-hidden rounded-2xl ${
-                p.span === "wide"
-                  ? "md:col-span-2"
-                  : p.span === "tall"
-                  ? "row-span-2"
-                  : ""
+                p.span === "wide" ? "md:col-span-2" : p.span === "tall" ? "row-span-2" : ""
               }`}
             >
               <img
@@ -416,7 +402,7 @@ function Depoimentos() {
       <div className="mx-auto max-w-7xl px-5 py-20 sm:px-8 md:py-28">
         <p className="text-[11px] uppercase tracking-luxe text-primary/70">Depoimentos</p>
         <h2 className="mt-4 max-w-3xl font-display text-4xl leading-tight text-primary sm:text-5xl">
-          A confiança de quem confiou.
+          Relatos de quem confiou.
         </h2>
 
         <div className="mt-14 grid gap-6 md:grid-cols-3">
@@ -431,9 +417,7 @@ function Depoimentos() {
                 className={`h-8 w-8 ${i === 1 ? "text-primary-foreground/60" : "text-primary/40"}`}
                 strokeWidth={1.5}
               />
-              <blockquote className="mt-5 text-[15px] leading-relaxed">
-                "{t.quote}"
-              </blockquote>
+              <blockquote className="mt-5 text-[15px] leading-relaxed">"{t.quote}"</blockquote>
               <figcaption className="mt-8 border-t border-current/15 pt-5">
                 <p className="font-display text-lg">{t.name}</p>
                 <p
@@ -441,7 +425,7 @@ function Depoimentos() {
                     i === 1 ? "text-primary-foreground/75" : "text-muted-foreground"
                   }`}
                 >
-                  {t.project} · {t.city}
+                  {t.project}
                 </p>
               </figcaption>
             </figure>
@@ -463,7 +447,7 @@ function BlogPreview() {
           <div>
             <p className="text-[11px] uppercase tracking-luxe text-primary/70">Conteúdo</p>
             <h2 className="mt-4 max-w-2xl font-display text-4xl leading-tight text-primary sm:text-5xl">
-              Aprenda sobre Arquitetura e Interiores.
+              Tudo o que você precisa saber antes de decorar ou reformar.
             </h2>
           </div>
           <Link
@@ -489,9 +473,7 @@ function BlogPreview() {
                 <p className="mt-5 text-[11px] uppercase tracking-luxe text-primary/70">
                   {p.category} · {formatDatePt(p.date)}
                 </p>
-                <h3 className="mt-3 font-display text-2xl leading-tight text-primary">
-                  {p.title}
-                </h3>
+                <h3 className="mt-3 font-display text-2xl leading-tight text-primary">{p.title}</h3>
                 <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-foreground/75">
                   {p.excerpt}
                 </p>
@@ -520,8 +502,17 @@ function FAQ() {
             Perguntas frequentes.
           </h2>
           <p className="mt-6 max-w-sm text-sm text-muted-foreground">
-            As dúvidas mais comuns sobre projeto de interiores online. Não encontrou a sua?
-            Me chama no WhatsApp.
+            As dúvidas mais comuns sobre projeto de interiores online. Não encontrou a sua? Me chama
+            no{" "}
+            <a
+              href={WHATSAPP_URL}
+              className="text-primary font-bold"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
+            </a>
+            .
           </p>
         </div>
 
@@ -535,9 +526,7 @@ function FAQ() {
                   className="flex w-full items-center justify-between gap-6 text-left"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-display text-xl leading-snug text-primary">
-                    {f.q}
-                  </span>
+                  <span className="font-display text-xl leading-snug text-primary">{f.q}</span>
                   {isOpen ? (
                     <Minus className="h-5 w-5 shrink-0 text-primary" />
                   ) : (
@@ -580,7 +569,7 @@ function CTAFinal() {
           <br />o seu espaço?
         </h2>
         <p className="mx-auto mt-6 max-w-xl text-base text-primary-foreground/85">
-          Atendo 100% online para todo o Brasil. Vamos conversar sobre o seu projeto?
+          Atendo 100% online para todo o mundo. Vamos conversar sobre o seu projeto?
         </p>
         <a
           href={WHATSAPP_URL}
@@ -588,7 +577,7 @@ function CTAFinal() {
           rel="noopener noreferrer"
           className="mt-10 inline-flex items-center gap-3 rounded-full bg-background px-8 py-4 text-[12px] uppercase tracking-luxe text-primary transition-transform hover:scale-[1.02]"
         >
-          Falar com a {SITE.founder.split(" ")[0]} no WhatsApp
+          Solicitar orçamento
           <ArrowRight className="h-4 w-4" />
         </a>
       </div>

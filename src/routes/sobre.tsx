@@ -16,8 +16,7 @@ export const Route = createFileRoute("/sobre")({
       { property: "og:title", content: "Sobre Luana Chiodini — Arquiteta de Interiores" },
       {
         property: "og:description",
-        content:
-          "Trajetória, método de trabalho e propósito por trás da Archiodini Projetos.",
+        content: "Trajetória, método de trabalho e propósito por trás da Archiodini Projetos.",
       },
       { property: "og:url", content: "/sobre" },
     ],
@@ -49,7 +48,7 @@ function SobrePage() {
     <article className="mx-auto max-w-7xl px-5 py-16 sm:px-8 md:py-24">
       <div className="grid gap-14 md:grid-cols-12 md:gap-16">
         <div className="md:col-span-5">
-          <div className="aspect-[4/5] w-full overflow-hidden bg-primary/10">
+          <div className="aspect-[4/5] w-full bg-primary/10">
             <div className="clip-arch h-full w-full">
               <img
                 src={luana}
@@ -72,14 +71,14 @@ function SobrePage() {
           <div className="prose-archiodini mt-10 max-w-xl">
             <p>
               Sou Luana Chiodini, arquiteta apaixonada por criar ambientes que contam histórias.
-              Desde os primeiros projetos, percebi que o meu trabalho não é decorar — é traduzir
-              em forma, luz e textura o jeito como cada cliente quer viver.
+              Desde os primeiros projetos, percebi que o meu trabalho não é decorar — é traduzir em
+              forma, luz e textura o jeito como cada cliente quer viver.
             </p>
             <p>
               Atendo <strong>100% de forma remota</strong> para todo o Brasil — de São Paulo a
-              Florianópolis, de Brasília ao interior do país. Esse modelo me permite estar perto
-              de quem normalmente não teria acesso a um projeto detalhado, sem abrir mão de
-              nenhuma etapa técnica.
+              Florianópolis, de Brasília ao interior do país. Esse modelo me permite estar perto de
+              quem normalmente não teria acesso a um projeto detalhado, sem abrir mão de nenhuma
+              etapa técnica.
             </p>
 
             <h2>Como eu trabalho</h2>

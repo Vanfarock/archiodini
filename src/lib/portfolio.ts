@@ -1,13 +1,12 @@
-import cozinha from "@/assets/projeto-cozinha.png";
-import sala from "@/assets/portfolio-sala.jpg";
-import quarto from "@/assets/portfolio-quarto.jpg";
-import closet from "@/assets/portfolio-closet.jpg";
-import homeoffice from "@/assets/portfolio-homeoffice.jpg";
-import banheiro from "@/assets/portfolio-banheiro.jpg";
+import sala_reuniao from "@/assets/portfolio-sala-reuniao.png";
+import cozinha_1 from "@/assets/portfolio-cozinha1.jpg";
+import cozinha_2 from "@/assets/portfolio-cozinha2.jpg";
+import cozinha_3 from "@/assets/portfolio-cozinha3.jpg";
+import cozinha_4 from "@/assets/portfolio-cozinha4.png";
+import living from "@/assets/portfolio-living.png";
+import quarto_bebe from "@/assets/portfolio-quarto-bebe.jpg";
+import sala_advocacia from "@/assets/portfolio-sala-advocacia.jpg";
 import recepcao from "@/assets/portfolio-recepcao.jpg";
-import cafe from "@/assets/portfolio-cafe.jpg";
-import escritorio from "@/assets/portfolio-escritorio.jpg";
-
 export type ProjectCategory = "residencial" | "comercial";
 
 export interface Project {
@@ -22,80 +21,77 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
-    slug: "cozinha-gourmet",
-    title: "Cozinha Gourmet com Ilha",
+    slug: "living",
+    title: "Sala de Estar",
     category: "residencial",
-    room: "Cozinha",
-    city: "Blumenau, SC",
-    image: cozinha,
-    span: "wide",
+    room: "Sala de Estar",
+    city: "",
+    image: living,
   },
   {
-    slug: "sala-estar-arcos",
-    title: "Sala de Estar — Janela em Arco",
-    category: "residencial",
-    room: "Sala",
-    city: "São Paulo, SP",
-    image: sala,
-    span: "tall",
-  },
-  {
-    slug: "suite-master",
-    title: "Suíte Master Serena",
-    category: "residencial",
-    room: "Quarto",
-    city: "Florianópolis, SC",
-    image: quarto,
-  },
-  {
-    slug: "closet-marmore",
-    title: "Closet com Ilha de Mármore",
-    category: "residencial",
-    room: "Closet",
-    city: "Brasília, DF",
-    image: closet,
-  },
-  {
-    slug: "home-office-acolhedor",
-    title: "Home Office Acolhedor",
-    category: "residencial",
-    room: "Home Office",
-    city: "Curitiba, PR",
-    image: homeoffice,
-  },
-  {
-    slug: "banheiro-spa",
-    title: "Banheiro Spa com Pedra Natural",
-    category: "residencial",
-    room: "Banheiro",
-    city: "Rio de Janeiro, RJ",
-    image: banheiro,
-    span: "tall",
-  },
-  {
-    slug: "recepcao-corporativa",
-    title: "Recepção Corporativa em Arco",
-    category: "comercial",
-    room: "Recepção",
-    city: "São Paulo, SP",
-    image: recepcao,
-    span: "wide",
-  },
-  {
-    slug: "cafe-botanico",
-    title: "Café Botânico",
-    category: "comercial",
-    room: "Café",
-    city: "Joinville, SC",
-    image: cafe,
-  },
-  {
-    slug: "escritorio-meeting",
-    title: "Sala de Reunião Executiva",
+    slug: "sala-advocacia",
+    title: "Advocacia",
     category: "comercial",
     room: "Escritório",
-    city: "Belo Horizonte, MG",
-    image: escritorio,
+    city: "",
+    image: sala_advocacia,
+  },
+  {
+    slug: "quarto-bebe",
+    title: "Quarto de Bebê",
+    category: "residencial",
+    room: "Quarto",
+    city: "",
+    image: quarto_bebe,
+  },
+  {
+    slug: "cozinha1",
+    title: "Cozinha",
+    category: "residencial",
+    room: "Cozinha",
+    city: "",
+    image: cozinha_1,
+  },
+  {
+    slug: "cozinha2",
+    title: "Cozinha",
+    category: "residencial",
+    room: "Cozinha",
+    city: "",
+    image: cozinha_2,
+  },
+  {
+    slug: "cozinha3",
+    title: "Cozinha",
+    category: "residencial",
+    room: "Cozinha",
+    city: "",
+    image: cozinha_3,
+  },
+  {
+    slug: "cozinha4",
+    title: "Cozinha",
+    category: "residencial",
+    room: "Cozinha",
+    city: "",
+    image: cozinha_4,
+  },
+
+  {
+    slug: "recepcao",
+    title: "Recepção",
+    category: "comercial",
+    room: "Recepção",
+    city: "",
+    image: recepcao,
+  },
+  {
+    slug: "sala-reuniao",
+    title: "Sala de Reunião",
+    category: "comercial",
+    room: "Sala de Reunião",
+    city: "",
+    image: sala_reuniao,
   },
 ];
 

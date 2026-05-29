@@ -1,6 +1,6 @@
 export const SITE = {
   name: "Archiodini Projetos",
-  tagline: "arte e interiores",
+  tagline: "arquitetura de interiores",
   founder: "Luana Chiodini",
   city: "Blumenau",
   region: "SC",
@@ -9,8 +9,7 @@ export const SITE = {
   whatsappNumber: "5547991619082",
   instagram: "https://www.instagram.com/luanachiodini.arq/",
   instagramHandle: "luanachiodini.arq",
-  facebook:
-    "https://www.facebook.com/people/Archiodini-Projetos/61573096983076/?locale=pt_BR",
+  facebook: "https://www.facebook.com/people/Archiodini-Projetos/61573096983076/?locale=pt_BR",
   youtube: "https://www.youtube.com/@archiodiniprojetos",
 };
 

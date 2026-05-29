@@ -132,10 +132,10 @@
   object-position: 38% center;
 }
 
-/* Arch clip-path for portraits and frames */
+/* Arch clip-path for portraits and frames (objectBoundingBox — scales symmetrically) */
 .clip-arch {
-  clip-path: path("M0 256 C0 114.6 114.6 0 256 0 C397.4 0 512 114.6 512 256 L512 640 L0 640 Z");
-  -webkit-clip-path: path("M0 256 C0 114.6 114.6 0 256 0 C397.4 0 512 114.6 512 256 L512 640 L0 640 Z");
+  clip-path: url(#clip-arch);
+  -webkit-clip-path: url(#clip-arch);
 }
 
 /* Sticky nav blur backdrop */
