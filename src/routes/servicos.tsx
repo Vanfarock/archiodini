@@ -1,48 +1,49 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Pencil, Video, Hammer, ClipboardList, Check, ArrowRight } from "lucide-react";
-import { WHATSAPP_URL } from "@/lib/site";
+import { Home, Flower, Store, ClipboardList, Check, ArrowRight } from "lucide-react";
+import { WHATSAPP_URL, SITE, absUrl } from "@/lib/site";
 
 const SERVICES = [
   {
-    icon: Pencil,
-    title: "Projeto Completo de Interiores",
-    desc: "O escopo mais completo. Do moodboard à prancha executiva, com tudo que sua equipe de obra precisa para executar com clareza.",
+    icon: Home,
+    title: "Projeto de Interiores Residencial",
+    desc: "Ambientes pensados para refletir seu estilo e tornar sua rotina mais leve.",
     inclusos: [
-      "Briefing e levantamento remoto",
+      "Briefing e levantamento de necessidades",
       "Estudo de layout e ergonomia",
-      "Render 3D realista de cada ambiente",
-      "Planta de marcenaria, elétrica e hidráulica",
-      "Especificação de materiais e mobiliário com links",
-      "Caderno de detalhes para a obra",
+      "Projeto de marcenaria sob medida",
+      "Especificação de revestimentos, pinturas e acabamentos",
+      "Render 3D dos ambientes",
+      "Lista de compras com referências de produtos",
     ],
   },
   {
-    icon: Video,
-    title: "Consultoria Online de Decoração",
-    desc: "Para quem precisa de orientação pontual sobre cores, móveis, iluminação ou disposição do que já tem.",
+    icon: Flower,
+    title: "Assessoria de Decoração",
+    desc: "Ajuda personalizada para escolher móveis, cores e detalhes que combinam com você.",
     inclusos: [
-      "Sessão por videochamada de até 90 minutos",
-      "Análise de fotos e plantas enviadas previamente",
-      "Lista de recomendações por escrito",
-      "Sugestões de fornecedores e produtos",
+      "Paleta de cores e combinações de materiais",
+      "Sugestão de móveis, objetos e acessórios",
+      "Layout de decoração e posicionamento de peças",
+      "Orientação sobre iluminação e têxteis",
+      "Recomendações de fornecedores e lojas",
     ],
   },
   {
-    icon: Hammer,
-    title: "Projeto de Reforma",
-    desc: "Planejamento completo de reformas residenciais com foco em funcionalidade e estética, entregue remotamente.",
+    icon: Store,
+    title: "Projeto de Interiores Comercial",
+    desc: "Espaços funcionais e acolhedores que fortalecem a identidade do seu negócio.",
     inclusos: [
-      "Análise técnica do espaço atual",
-      "Novo layout com fluxo otimizado",
-      "Especificação de revestimentos e acabamentos",
-      "Plantas executivas para a equipe de obra",
-      "Suporte por mensagem durante a execução",
+      "Análise de fluxo e circulação de clientes",
+      "Projeto alinhado à identidade da marca",
+      "Especificação de mobiliário e sinalização",
+      "Render 3D para validação do conceito",
+      "Plantas técnicas para execução da obra",
     ],
   },
   {
     icon: ClipboardList,
     title: "Assessoria em Orçamentos",
-    desc: "Auxílio na comparação e negociação de orçamentos com fornecedores e lojas, sem você sair de casa.",
+    desc: "Menos dúvidas na hora de comprar, mais tranquilidade para investir no seu espaço.",
     inclusos: [
       "Análise crítica dos orçamentos recebidos",
       "Comparativo de itens, prazos e garantias",
@@ -60,17 +61,17 @@ export const Route = createFileRoute("/servicos")({
       {
         name: "description",
         content:
-          "Projeto completo de interiores, consultoria online, projeto de reforma e assessoria em orçamentos. Atendimento 100% remoto para todo o Brasil.",
+          "Projeto de interiores residencial e comercial, assessoria de decoração e assessoria em orçamentos. Atendimento 100% remoto para todo o mundo.",
       },
       { property: "og:title", content: "Serviços de Arquitetura de Interiores Online" },
       {
         property: "og:description",
         content:
-          "Quatro formas de cuidar do seu espaço com a Archiodini Projetos.",
+          `Como podemos ajudar você? Conheça os serviços da ${SITE.name}.`,
       },
-      { property: "og:url", content: "/servicos" },
+      { property: "og:url", content: absUrl("/servicos") },
     ],
-    links: [{ rel: "canonical", href: "/servicos" }],
+    links: [{ rel: "canonical", href: absUrl("/servicos") }],
     scripts: [
       {
         type: "application/ld+json",
@@ -82,7 +83,7 @@ export const Route = createFileRoute("/servicos")({
             position: i + 1,
             name: s.title,
             description: s.desc,
-            provider: { "@type": "Organization", name: "Archiodini Projetos" },
+            provider: { "@type": "Organization", name: SITE.name },
             areaServed: "BR",
           })),
         }),
@@ -97,11 +98,11 @@ function ServicosPage() {
       <header className="max-w-3xl">
         <p className="text-[11px] uppercase tracking-luxe text-primary/70">Serviços</p>
         <h1 className="mt-4 font-display text-5xl leading-tight text-primary sm:text-6xl">
-          Quatro formas de cuidar do seu espaço.
+          Como podemos ajudar você?
         </h1>
         <p className="mt-6 text-base leading-relaxed text-foreground/75">
-          Cada serviço é entregue digitalmente, com contrato e cronograma. Você escolhe o escopo
-          ideal para o seu momento — e tem suporte humano em cada etapa.
+          Cada serviço é entregue digitalmente, com cronograma e contrato. Você escolhe o escopo
+          que faz sentido para o seu momento.
         </p>
       </header>
 

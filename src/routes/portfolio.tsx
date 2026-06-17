@@ -2,26 +2,26 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useMemo, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { PROJECTS, PORTFOLIO_FILTERS } from "@/lib/portfolio";
-import { WHATSAPP_URL } from "@/lib/site";
+import { WHATSAPP_URL, SITE, absUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/portfolio")({
   component: PortfolioPage,
   head: () => ({
     meta: [
-      { title: "Portfólio de Projetos de Interiores | Archiodini Projetos" },
+      { title: `Portfólio de Projetos de Interiores | ${SITE.name}` },
       {
         name: "description",
         content:
-          "Conheça projetos residenciais e comerciais de interiores assinados por Luana Chiodini — atendimento remoto para todo o Brasil.",
+          "Conheça projetos residenciais e comerciais de interiores assinados por Luana Chiodini — atendimento remoto para todo o mundo.",
       },
       { property: "og:title", content: "Portfólio de Projetos de Interiores" },
       {
         property: "og:description",
         content: "Projetos residenciais e comerciais de Luana Chiodini.",
       },
-      { property: "og:url", content: "/portfolio" },
+      { property: "og:url", content: absUrl("/portfolio") },
     ],
-    links: [{ rel: "canonical", href: "/portfolio" }],
+    links: [{ rel: "canonical", href: absUrl("/portfolio") }],
   }),
 });
 

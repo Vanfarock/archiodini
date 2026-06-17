@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowRight } from "lucide-react";
 import luana from "@/assets/luana-retrato.png";
-import { WHATSAPP_URL, SITE } from "@/lib/site";
+import { WHATSAPP_URL, SITE, absUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/sobre")({
   component: SobrePage,
@@ -11,16 +11,16 @@ export const Route = createFileRoute("/sobre")({
       {
         name: "description",
         content:
-          "Conheça Luana Chiodini, arquiteta e designer de interiores baseada em Blumenau (SC) com atendimento 100% remoto para todo o Brasil.",
+          "Conheça Luana Chiodini, arquiteta de interiores baseada em Blumenau (SC) com atendimento 100% remoto para todo o mundo.",
       },
       { property: "og:title", content: "Sobre Luana Chiodini — Arquiteta de Interiores" },
       {
         property: "og:description",
-        content: "Trajetória, método de trabalho e propósito por trás da Archiodini Projetos.",
+        content: `Trajetória, método de trabalho e propósito por trás da ${SITE.name}.`,
       },
-      { property: "og:url", content: "/sobre" },
+      { property: "og:url", content: absUrl("/sobre") },
     ],
-    links: [{ rel: "canonical", href: "/sobre" }],
+    links: [{ rel: "canonical", href: absUrl("/sobre") }],
     scripts: [
       {
         type: "application/ld+json",
@@ -28,8 +28,8 @@ export const Route = createFileRoute("/sobre")({
           "@context": "https://schema.org",
           "@type": "Person",
           name: "Luana Chiodini",
-          jobTitle: "Arquiteta e Designer de Interiores",
-          worksFor: { "@type": "Organization", name: "Archiodini Projetos" },
+          jobTitle: "Arquiteta de Interiores",
+          worksFor: { "@type": "Organization", name: SITE.name },
           address: {
             "@type": "PostalAddress",
             addressLocality: SITE.city,
@@ -47,16 +47,20 @@ function SobrePage() {
   return (
     <article className="mx-auto max-w-7xl px-5 py-16 sm:px-8 md:py-24">
       <div className="grid gap-14 md:grid-cols-12 md:gap-16">
-        <div className="md:col-span-5">
-          <div className="aspect-[4/5] w-full bg-primary/10">
+        <div className="relative md:col-span-5">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-md">
             <div className="clip-arch h-full w-full">
               <img
                 src={luana}
-                alt="Luana Chiodini, arquiteta e designer de interiores"
-                className="h-full w-full object-cover"
+                alt="Luana Chiodini, arquiteta de interiores"
+                className="h-full w-full object-cover object-[center_10%]"
               />
             </div>
           </div>
+          <div
+            aria-hidden="true"
+            className="absolute -bottom-8 -right-4 size-28 rounded-full bg-primary/15 -z-index-1"
+          />
         </div>
 
         <div className="md:col-span-7">
@@ -65,7 +69,7 @@ function SobrePage() {
             Luana Chiodini
           </h1>
           <p className="mt-3 text-sm uppercase tracking-luxe text-muted-foreground">
-            Arquiteta e Designer de Interiores · Blumenau, SC
+            Arquiteta de Interiores · Blumenau, SC
           </p>
 
           <div className="prose-archiodini mt-10 max-w-xl">
@@ -75,7 +79,7 @@ function SobrePage() {
               forma, luz e textura o jeito como cada cliente quer viver.
             </p>
             <p>
-              Atendo <strong>100% de forma remota</strong> para todo o Brasil — de São Paulo a
+              Atendo <strong>100% de forma remota</strong> para todo o mundo — de São Paulo a
               Florianópolis, de Brasília ao interior do país. Esse modelo me permite estar perto de
               quem normalmente não teria acesso a um projeto detalhado, sem abrir mão de nenhuma
               etapa técnica.

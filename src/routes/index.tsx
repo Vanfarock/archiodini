@@ -18,7 +18,7 @@ import { Arch } from "@/components/Arch";
 import { PROJECTS, PORTFOLIO_FILTERS } from "@/lib/portfolio";
 import { TESTIMONIALS } from "@/lib/testimonials";
 import { getAllPosts, formatDatePt } from "@/lib/blog";
-import { WHATSAPP_URL } from "@/lib/site";
+import { WHATSAPP_URL, absUrl } from "@/lib/site";
 
 const FAQ_ITEMS = [
   {
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Luana Chiodini, arquiteta de interiores 100% remota. Projetos residenciais completos, consultoria online e assessoria em reformas para todo o Brasil. Fale agora no WhatsApp.",
+          "Luana Chiodini, arquiteta de interiores 100% remota. Projetos residenciais completos, consultoria online e assessoria em reformas para todo o mundo. Fale agora no WhatsApp.",
       },
       {
         property: "og:title",
@@ -54,18 +54,18 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Projetos residenciais e comerciais 100% remotos, do conceito à execução. Atendemos todo o Brasil.",
+          "Projetos residenciais e comerciais 100% remotos, do conceito à execução. Atendemos todo o mundo.",
       },
-      { property: "og:url", content: "/" },
-      { property: "og:image", content: cozinha },
-      { name: "twitter:image", content: cozinha },
+      { property: "og:url", content: absUrl("/") },
+      { property: "og:image", content: absUrl(cozinha) },
+      { name: "twitter:image", content: absUrl(cozinha) },
       {
         name: "keywords",
         content:
-          "arquiteta de interiores online brasil, projeto de interiores remoto, Luana Chiodini, Archiodini Projetos, arquiteta remota brasil, design de interiores online",
+          "arquiteta de interiores online, projeto de interiores remoto, Luana Chiodini, Archiodini, arquiteta remota, design de interiores online",
       },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: absUrl("/") }],
     scripts: [
       {
         type: "application/ld+json",
@@ -172,7 +172,7 @@ function Sobre() {
             <div className="clip-arch h-full w-full">
               <img
                 src={luana}
-                alt="Retrato de Luana Chiodini, arquiteta e designer de interiores"
+                alt="Retrato de Luana Chiodini, arquiteta de interiores"
                 className="h-full w-full object-cover object-[center_10%]"
                 loading="lazy"
               />

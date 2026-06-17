@@ -1,6 +1,9 @@
 export const SITE = {
-  name: "Archiodini Projetos",
+  name: "Archiodini",
   tagline: "arquitetura de interiores",
+  url: "https://archiodini.com.br",
+  description:
+    "Luana Chiodini, arquiteta de interiores 100% remota. Projetos residenciais e comerciais online para todo o mundo.",
   founder: "Luana Chiodini",
   city: "Blumenau",
   region: "SC",
@@ -12,6 +15,13 @@ export const SITE = {
   facebook: "https://www.facebook.com/people/Archiodini-Projetos/61573096983076/?locale=pt_BR",
   youtube: "https://www.youtube.com/@archiodiniprojetos",
 };
+
+/** Builds an absolute URL for canonical, OG and sitemap entries. */
+export function absUrl(path: string): string {
+  if (path.startsWith("http://") || path.startsWith("https://")) return path;
+  const normalized = path.startsWith("/") ? path : `/${path}`;
+  return `${SITE.url}${normalized}`;
+}
 
 export const WHATSAPP_URL = `https://wa.me/${SITE.whatsappNumber}?text=${encodeURIComponent(
   "Olá Luana! Vim pelo site e gostaria de conversar sobre um projeto.",

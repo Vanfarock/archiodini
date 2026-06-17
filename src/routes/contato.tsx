@@ -1,25 +1,25 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Instagram, Youtube, Facebook, MapPin, Clock } from "lucide-react";
-import { SITE, WHATSAPP_URL } from "@/lib/site";
+import { SITE, WHATSAPP_URL, absUrl } from "@/lib/site";
 
 export const Route = createFileRoute("/contato")({
   component: ContatoPage,
   head: () => ({
     meta: [
-      { title: "Contato — Fale com Luana Chiodini | Archiodini Projetos" },
+      { title: `Contato — Fale com Luana Chiodini | ${SITE.name}` },
       {
         name: "description",
         content:
-          "Fale com Luana Chiodini no WhatsApp e comece seu projeto de interiores online. Atendimento remoto para todo o Brasil.",
+          "Fale com Luana Chiodini no WhatsApp e comece seu projeto de interiores online. Atendimento remoto para todo o mundo.",
       },
-      { property: "og:title", content: "Contato — Archiodini Projetos" },
+      { property: "og:title", content: `Contato — ${SITE.name}` },
       {
         property: "og:description",
-        content: "Atendimento remoto para todo o Brasil. Vamos conversar?",
+        content: "Atendimento remoto para todo o mundo. Vamos conversar?",
       },
-      { property: "og:url", content: "/contato" },
+      { property: "og:url", content: absUrl("/contato") },
     ],
-    links: [{ rel: "canonical", href: "/contato" }],
+    links: [{ rel: "canonical", href: absUrl("/contato") }],
   }),
 });
 
@@ -106,7 +106,7 @@ function ContatoPage() {
               Facebook
             </p>
             <p className="mt-1 text-sm text-foreground/70 group-hover:text-primary-foreground/85">
-              Archiodini Projetos
+              {SITE.name}
             </p>
           </div>
           <Facebook className="h-6 w-6 text-primary group-hover:text-primary-foreground" />
@@ -119,7 +119,7 @@ function ContatoPage() {
           <div>
             <p className="text-[11px] uppercase tracking-luxe text-primary/70">Base</p>
             <p className="mt-1 text-sm text-foreground/85">
-              Blumenau, SC — atendimento remoto para todo o Brasil
+              Blumenau, SC — atendimento remoto para todo o mundo
             </p>
           </div>
         </div>

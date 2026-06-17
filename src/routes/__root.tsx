@@ -13,7 +13,8 @@ import { Menu, X } from "lucide-react";
 
 import appCss from "../styles.css?url";
 import logo from "@/assets/logo-archiodini.png";
-import { NAV_LINKS, SITE, WHATSAPP_URL } from "@/lib/site";
+import cozinha from "@/assets/projeto-cozinha.png";
+import { NAV_LINKS, SITE, WHATSAPP_URL, absUrl } from "@/lib/site";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
 function NotFoundComponent() {
@@ -75,17 +76,17 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 const ORG_JSONLD = {
   "@context": "https://schema.org",
   "@type": ["LocalBusiness", "ProfessionalService"],
-  name: "Archiodini Projetos",
-  alternateName: "ARCHIODINI — arquitetura de interiores",
+  name: SITE.name,
+  alternateName: `${SITE.name} — ${SITE.tagline}`,
   founder: {
     "@type": "Person",
-    name: "Luana Chiodini",
-    jobTitle: "Arquiteta e Designer de Interiores",
+    name: SITE.founder,
+    jobTitle: "Arquiteta de Interiores",
   },
-  description: "Archiodini Projetos",
-  areaServed: "BR",
+  description: SITE.description,
+  areaServed: "Worldwide",
   serviceType: "Interior Design",
-  url: "/",
+  url: SITE.url,
   address: {
     "@type": "PostalAddress",
     addressLocality: SITE.city,
@@ -101,38 +102,18 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { name: "theme-color", content: "#5C6340" },
-      { property: "og:site_name", content: "Archiodini Projetos" },
+      { property: "og:site_name", content: SITE.name },
       { property: "og:type", content: "website" },
       { property: "og:locale", content: "pt_BR" },
       { name: "twitter:card", content: "summary_large_image" },
-      { title: "Lovable App" },
-      { property: "og:title", content: "Lovable App" },
-      { name: "twitter:title", content: "Lovable App" },
-      {
-        name: "description",
-        content:
-          "Archiodini Canvas is a modern, elegant website for Luana Chiodini, an architect offering remote interior design services across Brazil.",
-      },
-      {
-        property: "og:description",
-        content:
-          "Archiodini Canvas is a modern, elegant website for Luana Chiodini, an architect offering remote interior design services across Brazil.",
-      },
-      {
-        name: "twitter:description",
-        content:
-          "Archiodini Canvas is a modern, elegant website for Luana Chiodini, an architect offering remote interior design services across Brazil.",
-      },
-      {
-        property: "og:image",
-        content:
-          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3a6eac12-2c6a-4ac3-9800-34a7e16fc754/id-preview-b6f3d9a8--3b10730e-f84c-434a-a315-c9cfb7b3b614.lovable.app-1779766756335.png",
-      },
-      {
-        name: "twitter:image",
-        content:
-          "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/3a6eac12-2c6a-4ac3-9800-34a7e16fc754/id-preview-b6f3d9a8--3b10730e-f84c-434a-a315-c9cfb7b3b614.lovable.app-1779766756335.png",
-      },
+      { title: `Arquitetura de Interiores Online | ${SITE.name}` },
+      { property: "og:title", content: `Arquitetura de Interiores Online | ${SITE.name}` },
+      { name: "twitter:title", content: `Arquitetura de Interiores Online | ${SITE.name}` },
+      { name: "description", content: SITE.description },
+      { property: "og:description", content: SITE.description },
+      { name: "twitter:description", content: SITE.description },
+      { property: "og:image", content: absUrl(cozinha) },
+      { name: "twitter:image", content: absUrl(cozinha) },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -228,9 +209,7 @@ function Header() {
             />
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="font-display text-lg text-primary tracking-luxe">
-              ARCHIODINI PROJETOS
-            </span>
+            <span className="font-display text-lg text-primary tracking-luxe">ARCHIODINI</span>
             <span className="text-[10px] uppercase tracking-luxe text-muted-foreground">
               arquitetura de interiores
             </span>
@@ -392,12 +371,12 @@ function Footer() {
       <div className="border-t border-border/60">
         <div className="mx-auto max-w-7xl px-5 py-6 sm:px-8">
           <p className="text-[11px] leading-relaxed text-muted-foreground">
-            Archiodini Projetos — Arquiteta de Interiores Online · Projetos residenciais e
-            comerciais em São Paulo, Rio de Janeiro, Brasília, Belo Horizonte, Curitiba, Porto
-            Alegre, Florianópolis, Blumenau e todo o mundo.
+            {SITE.name} — Arquiteta de Interiores Online · Projetos residenciais e comerciais em São
+            São o, Rio de Janeiro, Brasília, Belo Horizonte, Curitiba, Porto Alegre, Flo Blumenau e
+            tod o o mundo.
           </p>
           <p className="mt-2 text-[11px] text-muted-foreground">
-            © {new Date().getFullYear()} Archiodini Projetos. Todos os direitos reservados.
+            © {new Date().getFullYear()} {SITE.name}. Todos os direitos reservados.
           </p>
         </div>
       </div>
