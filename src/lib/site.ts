@@ -1,5 +1,5 @@
 export const SITE = {
-  name: "Archiodini",
+  name: "Archiodini Projetos",
   tagline: "arquitetura de interiores",
   url: "https://archiodini.com.br",
   description:

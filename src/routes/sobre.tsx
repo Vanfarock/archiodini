@@ -74,29 +74,35 @@ function SobrePage() {
 
           <div className="prose-archiodini mt-10 max-w-xl">
             <p>
-              Sou Luana Chiodini, arquiteta apaixonada por criar ambientes que contam histórias.
-              Desde os primeiros projetos, percebi que o meu trabalho não é decorar — é traduzir em
-              forma, luz e textura o jeito como cada cliente quer viver.
+              Me chamo Luana Chiodini, arquiteta apaixonada por criar ambientes que contam
+              histórias. Desde os primeiros projetos, os clientes comentavam como se sentiam
+              ouvidos, como se eu traduzisse o gosto deles para dentro do lar e saísse direto dos
+              sonhos deles! Foi assim que comecei e continuo até hoje: com o objetivo de traduzir
+              sua personalidade para o seu ambiente, sempre de uma forma que funcione dentro da sua
+              rotina.
             </p>
             <p>
-              Atendo <strong>100% de forma remota</strong> para todo o mundo — de São Paulo a
-              Florianópolis, de Brasília ao interior do país. Esse modelo me permite estar perto de
-              quem normalmente não teria acesso a um projeto detalhado, sem abrir mão de nenhuma
-              etapa técnica.
+              Atendo de forma online para todo o Brasil e mundo afora também. Esse modelo me
+              permite estar perto de você que mora em outro estado, ou até mesmo que mora fora do
+              Brasil, mas quer uma arquiteta brasileira! Isso tudo sem abrir mão de nenhuma etapa
+              técnica e com você por dentro de todas decisões importantes da sua casa.
             </p>
 
             <h2>Como eu trabalho</h2>
             <p>
-              Cada projeto começa com uma conversa longa — sobre rotina, gostos, frustrações e
-              orçamento. Depois venho com referências, paleta de materiais e render 3D, ajustando
-              até estar 100% alinhado com a sua identidade. A entrega final é um pacote digital
-              completo, pronto para qualquer equipe de obra executar na sua cidade.
+              Cada projeto começa com um questionário que fazemos para você responder no conforto da
+              sua casa (sobre o que você quer para os espaços do lar, como funciona sua rotina,
+              desejos e frustrações hoje). Depois fazemos algumas opções de disposição de mobiliário
+              dentro do espaço que você tem. Após isso, começamos com referências, paleta de cores e
+              de materiais e imagens realistas 3D, ajustando até estar 100% alinhado com a sua
+              identidade. A entrega final é um pdf digital completo, pronto para qualquer equipe de
+              obra executar na sua cidade.
             </p>
 
             <h2>Onde já atendi</h2>
             <p>
-              Blumenau, Florianópolis, Joinville, Curitiba, São Paulo, Rio de Janeiro, Brasília,
-              Belo Horizonte e várias cidades do interior. Onde tem internet, tem projeto.
+              Blumenau, Indaial, Gaspar, Pomerode, Navegantes, Curitiba, São Paulo, Rio de Janeiro,
+              Belo Horizonte, Uberlândia e outras cidades.
             </p>
           </div>
 

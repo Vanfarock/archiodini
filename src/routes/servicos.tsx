@@ -1,55 +1,53 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Home, Flower, Store, ClipboardList, Check, ArrowRight } from "lucide-react";
+import { Home, Hammer, Headphones, Check, ArrowRight } from "lucide-react";
 import { WHATSAPP_URL, SITE, absUrl } from "@/lib/site";
+
+type ServiceItem = string | { text: string; starred?: boolean };
 
 const SERVICES = [
   {
     icon: Home,
-    title: "Projeto de Interiores Residencial",
-    desc: "Ambientes pensados para refletir seu estilo e tornar sua rotina mais leve.",
+    title: "Projeto completo de interiores",
+    desc: "Do questionário à entrega final, tudo que você precisa para executar seu lar com segurança.",
     inclusos: [
-      "Briefing e levantamento de necessidades",
-      "Estudo de layout e ergonomia",
-      "Projeto de marcenaria sob medida",
-      "Especificação de revestimentos, pinturas e acabamentos",
-      "Render 3D dos ambientes",
-      "Lista de compras com referências de produtos",
-    ],
+      "Questionário e levantamento de medidas remoto",
+      "Estudo de Layout (disposição de mobiliários)",
+      "Imagens Realistas de todos os ambientes",
+      "Projeto Executivo de marcenaria, marmoraria, estofaria, vidraçaria, pintura e papel de parede, revestimentos, etc",
+      "Relação de Louças e Metais (tabela de compras)",
+      "Projeto de Obra: Orientações para o pedreiro, eletricista, gesseiro e pintor",
+      "Especificação e sugestão de materiais",
+      "Caderno técnico de detalhes de projeto",
+    ] satisfies ServiceItem[],
+    obs: "Fazemos até 3 opções de pacotes de projeto para você contratar somente o que você precisa e faz sentido para sua realidade hoje! Se quiser saber mais e tiver alguma dúvida, me chama.",
   },
   {
-    icon: Flower,
-    title: "Assessoria de Decoração",
-    desc: "Ajuda personalizada para escolher móveis, cores e detalhes que combinam com você.",
+    icon: Hammer,
+    title: "Projeto de reforma",
+    desc: "Para quem quer integrar ambientes, mudar layout ou reformar com orientação técnica completa.",
     inclusos: [
-      "Paleta de cores e combinações de materiais",
-      "Sugestão de móveis, objetos e acessórios",
-      "Layout de decoração e posicionamento de peças",
-      "Orientação sobre iluminação e têxteis",
-      "Recomendações de fornecedores e lojas",
-    ],
+      "Análise técnica do espaço atual",
+      "Planta Baixa Layout: opções de disposição de mobiliários",
+      "Especificação e sugestão de revestimentos",
+      "Projeto Luminotécnico",
+      "Projeto Elétrico (novos pontos de tomada ou de luz)",
+      "Projeto de Gesso",
+      "Projeto de Paginação de Piso",
+      "Projeto de obra (demolir e construir paredes, para integrar ou separar ambientes)",
+    ] satisfies ServiceItem[],
   },
   {
-    icon: Store,
-    title: "Projeto de Interiores Comercial",
-    desc: "Espaços funcionais e acolhedores que fortalecem a identidade do seu negócio.",
+    icon: Headphones,
+    title: "Assessoria remota",
+    desc: "Apoio técnico pontual para orçamentos, materiais e dúvidas durante a execução do seu projeto.",
     inclusos: [
-      "Análise de fluxo e circulação de clientes",
-      "Projeto alinhado à identidade da marca",
-      "Especificação de mobiliário e sinalização",
-      "Render 3D para validação do conceito",
-      "Plantas técnicas para execução da obra",
-    ],
-  },
-  {
-    icon: ClipboardList,
-    title: "Assessoria em Orçamentos",
-    desc: "Menos dúvidas na hora de comprar, mais tranquilidade para investir no seu espaço.",
-    inclusos: [
-      "Análise crítica dos orçamentos recebidos",
-      "Comparativo de itens, prazos e garantias",
-      "Recomendação técnica de escolha",
-      "Sugestão de fornecedores alternativos",
-    ],
+      "Ajuda para fazer orçamentos (marcenaria, marmoraria, etc)",
+      "Análise técnica dos orçamentos recebidos",
+      "Recomendação técnica de escolha de materiais e fornecedores",
+      "Assessoria das suas dúvidas por mensagem",
+      "Assessoria de dúvidas dos fornecedores na execução do projeto",
+      "Ajuda na escolha da iluminação e decoração que combina melhor no seu lar",
+    ] satisfies ServiceItem[],
   },
 ];
 
@@ -61,13 +59,12 @@ export const Route = createFileRoute("/servicos")({
       {
         name: "description",
         content:
-          "Projeto de interiores residencial e comercial, assessoria de decoração e assessoria em orçamentos. Atendimento 100% remoto para todo o mundo.",
+          "Projeto completo de interiores, projeto de reforma e assessoria remota. Atendimento online para todo o Brasil e exterior.",
       },
       { property: "og:title", content: "Serviços de Arquitetura de Interiores Online" },
       {
         property: "og:description",
-        content:
-          `Como podemos ajudar você? Conheça os serviços da ${SITE.name}.`,
+        content: `Como podemos ajudar você? Conheça os serviços da ${SITE.name}.`,
       },
       { property: "og:url", content: absUrl("/servicos") },
     ],
@@ -91,6 +88,10 @@ export const Route = createFileRoute("/servicos")({
     ],
   }),
 });
+
+function serviceItemText(item: ServiceItem): string {
+  return typeof item === "string" ? item : item.text;
+}
 
 function ServicosPage() {
   return (
@@ -134,13 +135,30 @@ function ServicosPage() {
                   O que está incluso
                 </p>
                 <ul className="mt-5 space-y-3">
-                  {s.inclusos.map((it) => (
-                    <li key={it} className="flex items-start gap-3 text-[15px] text-foreground/85">
-                      <Check className="mt-1 h-4 w-4 shrink-0 text-primary" />
-                      <span>{it}</span>
-                    </li>
-                  ))}
+                  {s.inclusos.map((it) => {
+                    const starred = typeof it !== "string" && it.starred;
+                    return (
+                      <li
+                        key={serviceItemText(it)}
+                        className="flex items-start gap-3 text-[15px] text-foreground/85"
+                      >
+                        {starred ? (
+                          <span className="mt-0.5 shrink-0 text-primary" aria-hidden="true">
+                            *
+                          </span>
+                        ) : (
+                          <Check className="mt-1 h-4 w-4 shrink-0 text-primary" />
+                        )}
+                        <span>{serviceItemText(it)}</span>
+                      </li>
+                    );
+                  })}
                 </ul>
+                {"obs" in s && s.obs ? (
+                  <p className="mt-6 rounded-2xl border border-primary/15 bg-primary/5 px-5 py-4 text-[15px] leading-relaxed text-foreground/80">
+                    {s.obs}
+                  </p>
+                ) : null}
               </div>
             </section>
           );

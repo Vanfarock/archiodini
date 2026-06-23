@@ -19,8 +19,14 @@ export const TESTIMONIALS: Testimonial[] = [
   },
   {
     quote:
-      "Perfeita! Tive apoio em todas as etapas do processo, me ajudou muito com os orçamentos e prazos! Minha casa ficou linda!",
-    name: "Vinicius M.",
+      "Experiência maravilhosa, fiz o meu apartamento inteiro com a Luana, o cuidado com os detalhes, o auxílio nas decisões, os projetos muito bem executados, acertou tudo desde o início e deu suporte para a gente em todos os momentos. Indico muito e com certeza voltarei a fazer negócio!",
+    name: "Guilherme S.",
+    project: "Projeto Apartamento",
+  },
+  {
+    quote:
+      "Excelente profissional! Desde o início, entendeu exatamente o nosso gosto e transformou todas as nossas ideias em um projeto incrível! Além da criatividade e competência técnica, nos auxiliou demais na escolha de fornecedores, acompanhou cada etapa da execução e esteve sempre atenta aos mínimos detalhes. O cuidado e dedicação fizeram toda a diferença para que no final, nosso apartamento ficasse exatamente como sonhamos. Recomendo demais para quem busca uma arquiteta responsável, atenciosa e apaixonada pelo que faz!",
+    name: "Gabrielle F.",
     project: "Projeto Apartamento",
   },
   {

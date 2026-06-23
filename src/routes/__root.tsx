@@ -372,8 +372,8 @@ function Footer() {
         <div className="mx-auto max-w-7xl px-5 py-6 sm:px-8">
           <p className="text-[11px] leading-relaxed text-muted-foreground">
             {SITE.name} — Arquiteta de Interiores Online · Projetos residenciais e comerciais em São
-            São o, Rio de Janeiro, Brasília, Belo Horizonte, Curitiba, Porto Alegre, Flo Blumenau e
-            tod o o mundo.
+            Paulo, Rio de Janeiro, Brasília, Belo Horizonte, Curitiba, Porto Alegre, Florianópolis,
+            Blumenau e todo o mundo.
           </p>
           <p className="mt-2 text-[11px] text-muted-foreground">
             © {new Date().getFullYear()} {SITE.name}. Todos os direitos reservados.
