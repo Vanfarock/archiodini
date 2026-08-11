@@ -352,11 +352,10 @@ function Portfolio() {
 
         <div className="mt-12 grid auto-rows-[220px] grid-cols-2 gap-4 sm:auto-rows-[260px] md:grid-cols-3 md:gap-5">
           {items.map((p, i) => (
-            <a
+            <Link
               key={p.slug}
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              to="/portfolio/$slug"
+              params={{ slug: p.slug }}
               className={`group relative overflow-hidden rounded-2xl ${
                 p.span === "wide" ? "md:col-span-2" : p.span === "tall" ? "row-span-2" : ""
               }`}
@@ -370,17 +369,14 @@ function Portfolio() {
               <div className="absolute inset-0 bg-gradient-to-t from-primary/85 via-primary/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <div className="absolute inset-x-0 bottom-0 translate-y-3 p-5 text-primary-foreground opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                 <p className="font-display text-xl leading-tight">{p.title}</p>
-                <p className="mt-1 text-[11px] uppercase tracking-luxe text-primary-foreground/85">
-                  {p.room} · {p.city}
-                </p>
                 <span className="mt-3 inline-flex items-center gap-1.5 text-[11px] uppercase tracking-luxe">
-                  Quero um projeto assim <ArrowUpRight className="h-3.5 w-3.5" />
+                  Ver mais imagens <ArrowUpRight className="h-3.5 w-3.5" />
                 </span>
               </div>
               <div className="absolute left-3 top-3 rounded-full bg-background/85 px-3 py-1 text-[10px] uppercase tracking-luxe text-primary backdrop-blur-sm">
                 {p.category === "residencial" ? "Residencial" : "Comercial"}
               </div>
-            </a>
+            </Link>
           ))}
         </div>
 
