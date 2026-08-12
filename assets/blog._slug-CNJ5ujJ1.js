@@ -1,1 +1,0 @@
-import{j as t,L as o}from"./index-DsfXpWDe.js";const e=()=>t.jsxs("div",{className:"mx-auto max-w-2xl px-5 py-32 text-center",children:[t.jsx("h1",{className:"font-display text-4xl text-primary",children:"Artigo não encontrado"}),t.jsx(o,{to:"/blog",className:"mt-6 inline-block text-primary underline",children:"Voltar para o blog"})]});export{e as notFoundComponent};
