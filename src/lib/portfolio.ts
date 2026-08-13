@@ -171,6 +171,55 @@ import sobrado_aconchegante_19 from "@/assets/portfolio-sobrado-aconchegante-19.
 import sobrado_aconchegante_20 from "@/assets/portfolio-sobrado-aconchegante-20.png";
 import sobrado_aconchegante_21 from "@/assets/portfolio-sobrado-aconchegante-21.png";
 import sobrado_aconchegante_22 from "@/assets/portfolio-sobrado-aconchegante-22.png";
+import apartamento_elegante_cover from "@/assets/portfolio-apartamento-elegante-cover.png";
+import apartamento_elegante_01 from "@/assets/portfolio-apartamento-elegante-01.png";
+import apartamento_elegante_02 from "@/assets/portfolio-apartamento-elegante-02.png";
+import apartamento_elegante_03 from "@/assets/portfolio-apartamento-elegante-03.png";
+import apartamento_elegante_04 from "@/assets/portfolio-apartamento-elegante-04.png";
+import apartamento_elegante_05 from "@/assets/portfolio-apartamento-elegante-05.png";
+import apartamento_elegante_06 from "@/assets/portfolio-apartamento-elegante-06.png";
+import apartamento_cara_de_casa_cover from "@/assets/portfolio-apartamento-cara-de-casa-cover.png";
+import apartamento_cara_de_casa_01 from "@/assets/portfolio-apartamento-cara-de-casa-01.png";
+import apartamento_cara_de_casa_02 from "@/assets/portfolio-apartamento-cara-de-casa-02.png";
+import apartamento_cara_de_casa_03 from "@/assets/portfolio-apartamento-cara-de-casa-03.png";
+import apartamento_cara_de_casa_04 from "@/assets/portfolio-apartamento-cara-de-casa-04.png";
+import apartamento_cara_de_casa_05 from "@/assets/portfolio-apartamento-cara-de-casa-05.png";
+import apartamento_cara_de_casa_06 from "@/assets/portfolio-apartamento-cara-de-casa-06.png";
+import apartamento_cara_de_casa_07 from "@/assets/portfolio-apartamento-cara-de-casa-07.png";
+import apartamento_cara_de_casa_08 from "@/assets/portfolio-apartamento-cara-de-casa-08.png";
+import apartamento_cara_de_casa_09 from "@/assets/portfolio-apartamento-cara-de-casa-09.png";
+import apartamento_cara_de_casa_10 from "@/assets/portfolio-apartamento-cara-de-casa-10.png";
+import apartamento_cara_de_casa_11 from "@/assets/portfolio-apartamento-cara-de-casa-11.png";
+import apartamento_cara_de_casa_12 from "@/assets/portfolio-apartamento-cara-de-casa-12.png";
+import quarto_casal_acolhedor_cover from "@/assets/portfolio-quarto-casal-acolhedor-cover.png";
+import quarto_casal_acolhedor_01 from "@/assets/portfolio-quarto-casal-acolhedor-01.png";
+import quarto_casal_acolhedor_02 from "@/assets/portfolio-quarto-casal-acolhedor-02.png";
+import quarto_casal_acolhedor_03 from "@/assets/portfolio-quarto-casal-acolhedor-03.png";
+import quarto_casal_acolhedor_04 from "@/assets/portfolio-quarto-casal-acolhedor-04.png";
+import quarto_casal_acolhedor_05 from "@/assets/portfolio-quarto-casal-acolhedor-05.png";
+import quarto_casal_acolhedor_06 from "@/assets/portfolio-quarto-casal-acolhedor-06.png";
+import quarto_casal_acolhedor_07 from "@/assets/portfolio-quarto-casal-acolhedor-07.png";
+import quarto_casal_acolhedor_08 from "@/assets/portfolio-quarto-casal-acolhedor-08.png";
+import quarto_casal_acolhedor_09 from "@/assets/portfolio-quarto-casal-acolhedor-09.png";
+import home_office_duas_pessoas_cover from "@/assets/portfolio-home-office-duas-pessoas-cover.png";
+import home_office_duas_pessoas_01 from "@/assets/portfolio-home-office-duas-pessoas-01.png";
+import home_office_duas_pessoas_02 from "@/assets/portfolio-home-office-duas-pessoas-02.png";
+import home_office_duas_pessoas_03 from "@/assets/portfolio-home-office-duas-pessoas-03.png";
+import home_office_duas_pessoas_04 from "@/assets/portfolio-home-office-duas-pessoas-04.png";
+import home_office_duas_pessoas_05 from "@/assets/portfolio-home-office-duas-pessoas-05.png";
+import home_office_duas_pessoas_06 from "@/assets/portfolio-home-office-duas-pessoas-06.png";
+import banheiros_possibilidades_cover from "@/assets/portfolio-banheiros-possibilidades-cover.png";
+import banheiros_possibilidades_01 from "@/assets/portfolio-banheiros-possibilidades-01.png";
+import banheiros_possibilidades_02 from "@/assets/portfolio-banheiros-possibilidades-02.png";
+import banheiros_possibilidades_03 from "@/assets/portfolio-banheiros-possibilidades-03.png";
+import banheiros_possibilidades_04 from "@/assets/portfolio-banheiros-possibilidades-04.png";
+import banheiros_possibilidades_05 from "@/assets/portfolio-banheiros-possibilidades-05.png";
+import banheiros_possibilidades_06 from "@/assets/portfolio-banheiros-possibilidades-06.png";
+import banheiros_possibilidades_07 from "@/assets/portfolio-banheiros-possibilidades-07.png";
+import banheiro_boho_chic_cover from "@/assets/portfolio-banheiro-boho-chic-cover.png";
+import banheiro_boho_chic_01 from "@/assets/portfolio-banheiro-boho-chic-01.png";
+import banheiro_boho_chic_02 from "@/assets/portfolio-banheiro-boho-chic-02.png";
+import banheiro_boho_chic_03 from "@/assets/portfolio-banheiro-boho-chic-03.png";
 import apartamento_japones_cover from "@/assets/portfolio-apartamento-japones-cover.png";
 import apartamento_japones_01 from "@/assets/portfolio-apartamento-japones-01.png";
 import apartamento_japones_02 from "@/assets/portfolio-apartamento-japones-02.png";
@@ -215,6 +264,8 @@ export interface Project {
   /** Paragraphs about the project. Use **text** to highlight. */
   story?: string[];
   span?: "tall" | "wide";
+  /** Special gallery arrangement. "side-tall" = 4 stacked on the left, 1 tall on the right. */
+  galleryLayout?: "side-tall";
 }
 
 export const PROJECTS: Project[] = [
@@ -560,6 +611,119 @@ export const PROJECTS: Project[] = [
       sobrado_aconchegante_20,
       sobrado_aconchegante_21,
       sobrado_aconchegante_22,
+    ],
+  },
+  {
+    slug: "apartamento-elegante-escuro-aconchegante",
+    title: "Apartamento Elegante: escuro, mas aconchegante",
+    category: "residencial",
+    room: "Apartamento",
+    city: "",
+    image: apartamento_elegante_cover,
+    galleryLayout: "side-tall",
+    images: [
+      // Left stack (4 horizontals)
+      apartamento_elegante_cover,
+      apartamento_elegante_02,
+      apartamento_elegante_03,
+      apartamento_elegante_04,
+      // Tall vertical on the right
+      apartamento_elegante_01,
+      // Remaining in the normal grid
+      apartamento_elegante_05,
+      apartamento_elegante_06,
+    ],
+  },
+  {
+    slug: "apartamento-com-cara-de-casa",
+    title: "Apartamento com cara de casa",
+    category: "residencial",
+    room: "Apartamento",
+    city: "",
+    image: apartamento_cara_de_casa_cover,
+    images: [
+      apartamento_cara_de_casa_cover,
+      apartamento_cara_de_casa_01,
+      apartamento_cara_de_casa_02,
+      apartamento_cara_de_casa_03,
+      apartamento_cara_de_casa_04,
+      apartamento_cara_de_casa_05,
+      apartamento_cara_de_casa_06,
+      apartamento_cara_de_casa_07,
+      apartamento_cara_de_casa_08,
+      apartamento_cara_de_casa_09,
+      apartamento_cara_de_casa_10,
+      apartamento_cara_de_casa_11,
+      apartamento_cara_de_casa_12,
+    ],
+  },
+  {
+    slug: "quarto-casal-acolhedor",
+    title: "Quarto Casal Acolhedor",
+    category: "residencial",
+    room: "Quarto",
+    city: "",
+    image: quarto_casal_acolhedor_cover,
+    images: [
+      quarto_casal_acolhedor_cover,
+      quarto_casal_acolhedor_01,
+      quarto_casal_acolhedor_02,
+      quarto_casal_acolhedor_03,
+      quarto_casal_acolhedor_04,
+      quarto_casal_acolhedor_05,
+      quarto_casal_acolhedor_06,
+      quarto_casal_acolhedor_07,
+      quarto_casal_acolhedor_08,
+      quarto_casal_acolhedor_09,
+    ],
+  },
+  {
+    slug: "home-office-para-duas-pessoas",
+    title: "Home Office para duas pessoas",
+    category: "residencial",
+    room: "Home Office",
+    city: "",
+    image: home_office_duas_pessoas_cover,
+    images: [
+      home_office_duas_pessoas_cover,
+      home_office_duas_pessoas_01,
+      home_office_duas_pessoas_02,
+      home_office_duas_pessoas_03,
+      home_office_duas_pessoas_04,
+      home_office_duas_pessoas_05,
+      home_office_duas_pessoas_06,
+    ],
+  },
+  {
+    slug: "banheiros-e-suas-possibilidades",
+    title: "Banheiros e suas possibilidades",
+    category: "residencial",
+    room: "Banheiro",
+    city: "",
+    image: banheiros_possibilidades_cover,
+    images: [
+      banheiros_possibilidades_cover,
+      banheiros_possibilidades_01,
+      banheiros_possibilidades_02,
+      banheiros_possibilidades_03,
+      banheiros_possibilidades_04,
+      banheiros_possibilidades_05,
+      banheiros_possibilidades_06,
+      banheiros_possibilidades_07,
+    ],
+  },
+  {
+    slug: "banheiro-boho-chic",
+    title: "Banheiro Boho Chic",
+    category: "residencial",
+    room: "Banheiro",
+    city: "",
+    image: banheiro_boho_chic_cover,
+    images: [
+      banheiro_boho_chic_cover,
+      banheiro_boho_chic_01,
+      banheiro_boho_chic_02,
+      banheiro_boho_chic_03,
     ],
   },
   {

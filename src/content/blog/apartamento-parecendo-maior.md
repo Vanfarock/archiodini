@@ -10,7 +10,10 @@ tags:
   - "ampliar apartamento"
   - "marcenaria planejada"
   - "projeto de interiores"
-cover: "cozinha"
+cover: "sala_vinilico"
+images:
+  - "living"
+  - "japones"
 faq:
   - q: "Apartamento pequeno precisa ser todo branco?"
     a: "Não. Paletas suaves e harmoniosas ampliam visualmente sem deixar o ambiente frio ou sem personalidade."

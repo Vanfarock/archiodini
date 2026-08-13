@@ -40,36 +40,36 @@ function ContatoPage() {
           href={WHATSAPP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center justify-between rounded-2xl border border-primary/15 bg-primary p-7 text-primary-foreground transition-opacity hover:opacity-90"
+          className="group flex items-center justify-between rounded-2xl border border-primary/15 bg-card p-7 transition-colors hover:bg-primary hover:text-primary-foreground"
         >
           <div>
-            <p className="text-[11px] uppercase tracking-luxe text-primary-foreground/70">
+            <p className="text-[11px] uppercase tracking-luxe text-primary/70 group-hover:text-primary-foreground/70">
               Resposta em horas
             </p>
-            <p className="mt-2 font-display text-2xl">WhatsApp</p>
-            <p className="mt-1 text-sm text-primary-foreground/85">+55 47 99161-9082</p>
+            <p className="mt-2 font-display text-2xl text-primary group-hover:text-primary-foreground">
+              WhatsApp
+            </p>
+            <p className="mt-1 text-sm text-foreground/70 group-hover:text-primary-foreground/85">
+              +55 47 99161-9082
+            </p>
           </div>
-          <ArrowRight className="h-6 w-6 transition-transform group-hover:translate-x-1" />
+          <ArrowRight className="h-6 w-6 text-primary transition-transform group-hover:translate-x-1 group-hover:text-primary-foreground" />
         </a>
 
         <a
           href={SITE.instagram}
           target="_blank"
           rel="noopener noreferrer"
-          className="group flex items-center justify-between rounded-2xl border border-primary/15 bg-card p-7 transition-colors hover:bg-primary hover:text-primary-foreground"
+          className="group flex items-center justify-between rounded-2xl border border-primary/15 bg-primary p-7 text-primary-foreground transition-opacity hover:opacity-90"
         >
           <div>
-            <p className="text-[11px] uppercase tracking-luxe text-primary/70 group-hover:text-primary-foreground/70">
+            <p className="text-[11px] uppercase tracking-luxe text-primary-foreground/70">
               Bastidores e projetos
             </p>
-            <p className="mt-2 font-display text-2xl text-primary group-hover:text-primary-foreground">
-              Instagram
-            </p>
-            <p className="mt-1 text-sm text-foreground/70 group-hover:text-primary-foreground/85">
-              @{SITE.instagramHandle}
-            </p>
+            <p className="mt-2 font-display text-2xl">Instagram</p>
+            <p className="mt-1 text-sm text-primary-foreground/85">@{SITE.instagramHandle}</p>
           </div>
-          <Instagram className="h-6 w-6 text-primary group-hover:text-primary-foreground" />
+          <Instagram className="h-6 w-6" />
         </a>
 
         <a

@@ -10,7 +10,10 @@ tags:
   - "decoração personalizada"
   - "projeto de interiores"
   - "identidade visual"
-cover: "cozinha"
+cover: "boho"
+images:
+  - "japones"
+  - "quarto_bebe"
 faq:
   - q: "Preciso definir um estilo antes do projeto?"
     a: "Não. O mais importante é entender como você quer se sentir em casa — aconchego, praticidade, leveza ou sofisticação."

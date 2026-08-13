@@ -10,7 +10,10 @@ tags:
   - "apartamento na planta"
   - "projeto de interiores"
   - "arquiteta de interiores online"
-cover: "cozinha"
+cover: "living"
+images:
+  - "familia_11"
+  - "sobrado"
 faq:
   - q: "Dá para fazer projeto sem ter acesso ao apartamento?"
     a: "Sim. Com a planta e medidas fornecidas pela construtora, é possível desenvolver layout, 3D e executivo antes da entrega."

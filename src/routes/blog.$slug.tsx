@@ -136,6 +136,21 @@ function PostPage() {
         />
       </div>
 
+      {post.images.length > 0 && (
+        <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2">
+          {post.images.map((src, i) => (
+            <div key={`${post.slug}-extra-${i}`} className="overflow-hidden rounded-2xl">
+              <img
+                src={src}
+                alt={`${post.title} — imagem ${i + 2}`}
+                className="aspect-[4/3] h-full w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
+      )}
+
       <div className="prose-archiodini mt-8" dangerouslySetInnerHTML={{ __html: post.body }} />
 
       {post.faq.length > 0 && (

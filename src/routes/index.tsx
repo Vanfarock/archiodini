@@ -18,7 +18,7 @@ import { Arch } from "@/components/Arch";
 import { PROJECTS, PORTFOLIO_FILTERS } from "@/lib/portfolio";
 import { TESTIMONIALS } from "@/lib/testimonials";
 import { getAllPosts, formatDatePt } from "@/lib/blog";
-import { WHATSAPP_URL, absUrl } from "@/lib/site";
+import { WHATSAPP_URL, SITE, absUrl } from "@/lib/site";
 
 const FAQ_ITEMS = [
   {
@@ -280,8 +280,8 @@ function Servicos() {
             Como podemos ajudar você?
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            Cada serviço é entregue digitalmente, com cronograma e contrato. Você escolhe o escopo
-            que faz sentido para o seu momento.
+            Cada serviço é entregue digitalmente, com todos detalhes necessários para execução. Você
+            escolhe o pacote que faz sentido para o seu momento.
           </p>
         </header>
 
@@ -381,12 +381,14 @@ function Portfolio() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <Link
-            to="/portfolio"
+          <a
+            href={SITE.instagram}
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-full border border-primary/30 px-6 py-3 text-[12px] uppercase tracking-luxe text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
           >
             Ver mais projetos <ArrowRight className="h-4 w-4" />
-          </Link>
+          </a>
         </div>
       </div>
     </section>

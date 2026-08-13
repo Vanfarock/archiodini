@@ -116,24 +116,86 @@ function ProjectPage() {
         Toque em uma foto para ver em tamanho maior, sem cortes.
       </p>
 
-      <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
-        {images.map((src, i) => (
-          <button
-            key={`${project.slug}-${i}`}
-            type="button"
-            onClick={() => setActiveIndex(i)}
-            className="group block w-full overflow-hidden rounded-2xl bg-card text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
-          >
-            <img
-              src={src}
-              alt={`${project.title} — vista ${i + 1}`}
-              loading={i < 3 ? "eager" : "lazy"}
-              decoding="async"
-              className="h-auto w-full transition-transform duration-700 group-hover:scale-[1.015]"
-            />
-          </button>
-        ))}
-      </div>
+      {project.galleryLayout === "side-tall" && images.length >= 5 ? (
+        <>
+          {/* 4 horizontals stacked left + 1 tall vertical right */}
+          <div className="mt-5 grid grid-cols-1 gap-5 md:grid-cols-2 md:items-stretch">
+            <div className="flex flex-col gap-5">
+              {[0, 1, 2, 3].map((i) => (
+                <button
+                  key={`${project.slug}-${i}`}
+                  type="button"
+                  onClick={() => setActiveIndex(i)}
+                  className="group block w-full overflow-hidden rounded-2xl bg-card text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+                >
+                  <img
+                    src={images[i]}
+                    alt={`${project.title} — vista ${i + 1}`}
+                    loading={i < 2 ? "eager" : "lazy"}
+                    decoding="async"
+                    className="h-auto w-full transition-transform duration-700 group-hover:scale-[1.015]"
+                  />
+                </button>
+              ))}
+            </div>
+            <button
+              type="button"
+              onClick={() => setActiveIndex(4)}
+              className="group relative block min-h-[280px] w-full overflow-hidden rounded-2xl bg-card text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 md:min-h-0"
+            >
+              <img
+                src={images[4]}
+                alt={`${project.title} — vista 5`}
+                loading="eager"
+                decoding="async"
+                className="h-auto w-full transition-transform duration-700 group-hover:scale-[1.015] md:absolute md:inset-0 md:h-full md:object-cover md:object-center"
+              />
+            </button>
+          </div>
+          {images.length > 5 && (
+            <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+              {images.slice(5).map((src, offset) => {
+                const i = offset + 5;
+                return (
+                  <button
+                    key={`${project.slug}-${i}`}
+                    type="button"
+                    onClick={() => setActiveIndex(i)}
+                    className="group block w-full overflow-hidden rounded-2xl bg-card text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+                  >
+                    <img
+                      src={src}
+                      alt={`${project.title} — vista ${i + 1}`}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-auto w-full transition-transform duration-700 group-hover:scale-[1.015]"
+                    />
+                  </button>
+                );
+              })}
+            </div>
+          )}
+        </>
+      ) : (
+        <div className="mt-5 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {images.map((src, i) => (
+            <button
+              key={`${project.slug}-${i}`}
+              type="button"
+              onClick={() => setActiveIndex(i)}
+              className="group block w-full overflow-hidden rounded-2xl bg-card text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+            >
+              <img
+                src={src}
+                alt={`${project.title} — vista ${i + 1}`}
+                loading={i < 3 ? "eager" : "lazy"}
+                decoding="async"
+                className="h-auto w-full transition-transform duration-700 group-hover:scale-[1.015]"
+              />
+            </button>
+          ))}
+        </div>
+      )}
 
       {project.story && project.story.length > 0 && (
         <div className="mt-14 grid grid-cols-1 items-start gap-8 md:grid-cols-2 md:gap-12 lg:gap-16">

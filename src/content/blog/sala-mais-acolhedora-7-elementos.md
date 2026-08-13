@@ -10,7 +10,10 @@ tags:
   - "decoração de sala"
   - "iluminação residencial"
   - "projeto de interiores"
-cover: "cozinha"
+cover: "sobrado_sala"
+images:
+  - "sobrado"
+  - "refugio_sala"
 faq:
   - q: "O que mais influencia o aconchego da sala?"
     a: "Iluminação em camadas e texturas — almofadas, tapetes e cortinas — criam a sensação de conforto mais rapidamente."

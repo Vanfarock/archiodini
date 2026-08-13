@@ -11,7 +11,10 @@ tags:
   - "projeto de interiores"
   - "arquiteta de interiores"
 readingMinutes: 7
-cover: "cozinha"
+cover: "cozinha_ilha"
+images:
+  - "cozinha_atemporal"
+  - "sala_vinilico"
 faq:
   - q: "Vale a pena contratar arquiteta para reforma pequena?"
     a: "Sim. Mesmo em reformas pequenas, um projeto bem detalhado evita retrabalho e costuma se pagar em economia de materiais e mão de obra."

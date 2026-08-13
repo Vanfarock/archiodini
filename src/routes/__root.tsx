@@ -13,6 +13,7 @@ import { Menu, X } from "lucide-react";
 
 import appCss from "../styles.css?url";
 import logo from "@/assets/logo-archiodini.png";
+import luana from "@/assets/luana-retrato.png";
 import cozinha from "@/assets/projeto-cozinha.png";
 import { NAV_LINKS, SITE, WHATSAPP_URL, absUrl } from "@/lib/site";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
@@ -201,15 +202,15 @@ function Header() {
         <Link to="/" aria-label="Archiodini — início" className="flex items-center gap-3">
           <span className="block h-11 w-11 overflow-hidden rounded-full ring-1 ring-primary/15">
             <img
-              src={logo}
-              alt="Logo Archiodini"
-              className="logo-crop h-full w-full"
+              src={luana}
+              alt="Luana Chiodini"
+              className="h-full w-full object-cover object-[center_15%]"
               width={44}
               height={44}
             />
           </span>
           <span className="flex flex-col leading-tight">
-            <span className="font-display text-lg text-primary tracking-luxe">ARCHIODINI</span>
+            <span className="font-display text-lg text-primary tracking-luxe">ARCHIODINI PROJETOS</span>
             <span className="text-[10px] uppercase tracking-luxe text-muted-foreground">
               arquitetura de interiores
             </span>
@@ -283,10 +284,14 @@ function Footer() {
         <div>
           <div className="flex items-center gap-3">
             <span className="block h-10 w-10 overflow-hidden rounded-full ring-1 ring-primary/15">
-              <img src={logo} alt="" className="logo-crop h-full w-full" />
+              <img
+                src={luana}
+                alt=""
+                className="h-full w-full object-cover object-[center_15%]"
+              />
             </span>
             <div className="flex flex-col leading-tight">
-              <span className="font-display tracking-luxe text-primary">ARCHIODINI</span>
+              <span className="font-display tracking-luxe text-primary">ARCHIODINI PROJETOS</span>
               <span className="text-[10px] uppercase tracking-luxe text-muted-foreground">
                 arquitetura de interiores
               </span>

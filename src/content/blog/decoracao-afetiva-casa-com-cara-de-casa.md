@@ -10,7 +10,10 @@ tags:
   - "casa com cara de casa"
   - "decoração personalizada"
   - "projeto de interiores"
-cover: "cozinha"
+cover: "familia_11"
+images:
+  - "living"
+  - "japones_varanda"
 faq:
   - q: "Decoração afetiva significa expor todos os objetos?"
     a: "Não. O segredo está em selecionar o que realmente representa você e integrar esses elementos de forma harmoniosa."

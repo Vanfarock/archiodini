@@ -11,7 +11,10 @@ tags:
   - "escritório em casa"
   - "arquitetura de interiores"
 readingMinutes: 6
-cover: "cozinha"
+cover: "familia_26"
+images:
+  - "familia_27"
+  - "japones_mesa"
 faq:
   - q: "Qual o tamanho mínimo para um home office confortável?"
     a: "A partir de 4 m² já é possível criar um home office funcional, desde que o layout e a marcenaria sejam bem pensados."

@@ -10,7 +10,10 @@ tags:
   - "tendências de interiores"
   - "decoração atemporal"
   - "projeto de interiores"
-cover: "cozinha"
+cover: "japones"
+images:
+  - "cozinha_atemporal"
+  - "boho_sala"
 faq:
   - q: "Devo seguir todas as tendências de 2026?"
     a: "Não. Priorize soluções que melhoram sua rotina: armazenamento, iluminação aconchegante e materiais naturais."

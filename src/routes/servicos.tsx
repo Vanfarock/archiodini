@@ -102,8 +102,8 @@ function ServicosPage() {
           Como podemos ajudar você?
         </h1>
         <p className="mt-6 text-base leading-relaxed text-foreground/75">
-          Cada serviço é entregue digitalmente, com cronograma e contrato. Você escolhe o escopo
-          que faz sentido para o seu momento.
+          Cada serviço é entregue digitalmente, com todos detalhes necessários para execução. Você
+          escolhe o pacote que faz sentido para o seu momento.
         </p>
       </header>
 

@@ -10,7 +10,10 @@ tags:
   - "projeto de banheiro"
   - "marcenaria planejada"
   - "arquitetura de interiores"
-cover: "cozinha"
+cover: "lavabo"
+images:
+  - "lavabo_2"
+  - "lavabo_3"
 faq:
   - q: "Banheiro pequeno precisa ser todo branco?"
     a: "Não. Tons claros ampliam visualmente, mas texturas, metais e acabamentos bem escolhidos trazem personalidade sem perder leveza."

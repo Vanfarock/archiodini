@@ -11,7 +11,10 @@ tags:
   - "projeto executivo"
   - "projeto 3D"
   - "arquitetura de interiores online"
-cover: "cozinha"
+cover: "reuniao"
+images:
+  - "advocacia"
+  - "sobrado"
 faq:
   - q: "Preciso ter o apartamento pronto para iniciar o projeto?"
     a: "Não. Na maioria dos casos dá para começar com a planta da construtora e levantamento de medidas, mesmo antes da entrega das chaves."

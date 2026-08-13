@@ -10,7 +10,10 @@ tags:
   - "cores para interiores"
   - "tinta para casa"
   - "decoração de ambientes"
-cover: "cozinha"
+cover: "quarto_bebe"
+images:
+  - "quarto_bebe_2"
+  - "japones_quarto"
 faq:
   - q: "Ambientes pequenos precisam ser sempre claros?"
     a: "Não necessariamente. Cores mais intensas podem funcionar quando bem equilibradas com iluminação e proporção dos elementos."

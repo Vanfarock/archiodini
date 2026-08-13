@@ -10,7 +10,10 @@ tags:
   - "comprar apartamento"
   - "projeto de interiores"
   - "planejamento imobiliário"
-cover: "cozinha"
+cover: "refugio"
+images:
+  - "sala_vinilico_2"
+  - "cozinha_ilha"
 faq:
   - q: "Posso começar o projeto antes de receber as chaves?"
     a: "Sim. Com a planta da construtora já é possível desenvolver layout, 3D e projeto executivo com antecedência."

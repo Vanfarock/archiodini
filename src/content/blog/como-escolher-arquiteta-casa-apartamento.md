@@ -11,7 +11,10 @@ tags:
   - "arquiteta de interiores online"
   - "projeto 3D"
   - "projeto executivo"
-cover: "cozinha"
+cover: "advocacia"
+images:
+  - "reuniao"
+  - "recepcao"
 faq:
   - q: "O que perguntar na primeira conversa com uma arquiteta?"
     a: "Entenda o processo completo: briefing, apresentações, revisões, entregáveis e prazos de cada etapa."
