@@ -1,1 +1,0 @@
-import{k as o,L as t}from"./index-CkaVlVnu.js";const e=()=>o.jsxs("div",{className:"mx-auto max-w-2xl px-5 py-32 text-center",children:[o.jsx("h1",{className:"font-display text-4xl text-primary",children:"Projeto não encontrado"}),o.jsx(t,{to:"/portfolio",className:"mt-6 inline-block text-primary underline",children:"Voltar ao portfólio"})]});export{e as notFoundComponent};
